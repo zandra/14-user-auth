@@ -1,6 +1,6 @@
-# User Overview
+# Walkthrough
 
-Hello and welcome to the User walk-though, a deep dive into our application's user creation and login authentication.
+Hello and welcome to the User and Passport documents, a deep dive into our application's user creation and login authentication.
 
 - [User Overview](#user-overview)
   - [User Schema](#user-schema)
@@ -203,6 +203,6 @@ return res.redirect("/");
 │
 ├── server.js
 │
-└── walkthrough.md
+└── README.md
 
 ```
