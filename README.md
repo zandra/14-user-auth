@@ -4,11 +4,10 @@ Hello and welcome to the User walk-though, a deep dive into our application's us
 
 - [User Overview](#user-overview)
   - [User Schema](#user-schema)
-  - [Authentication](#authentication)
-    - [Passport Configuration](#passport-configuration)
-    - [Middleware](#middleware)
-    - [Sidebar Sessions](#sidebar-sessions)
-    - [Login Status](#login-status)
+  - [Passport Configuration](#passport-configuration)
+  - [Middleware](#middleware)
+  - [Sidebar Sessions](#sidebar-sessions)
+  - [Login Status](#login-status)
   - [Routing and client-side javascript](#routing-and-client-side-javascript)
 - [Application Directory](#application-directory)
 
@@ -57,15 +56,9 @@ User.prototype.validPassword = function(password) {
 
 [Full user schema configuration can be found here](./config/passport.js)
 
-## Authentication
+## Passport Configuration
 
-The authentication for our app is handed handled by the Passport middleware which is easily configured in our Node.js and Express app.
-￼
-This tutorial will walk you through our app's authentication configuration. When finished you should be able ....
-
-### Passport Configuration
-
-Using passport in our express app is simple as requiring it in our main configuration file located at the directory root: server.js [Project File Structure]
+Using passport in our express app is simple as requiring it in our main configuration file located at the directory root: server.js (Refer to the [Application Directory](#application-directory) to see the app file structure.)
 
 Passport has multiple configuration options to support many types of authorization needs. Our application's passport configuration is defined within our `config/middleware` directory. Notice that we must require our app's passport strategy at the top of our file; to support our apps username/password authentication, we can require passports `LocalStrategy` module after requiring passport.
 
@@ -79,8 +72,7 @@ The purpose of a verify callback is to find the user that possesses a set of cre
 
 The verify callback for local authentication accepts username and password arguments, which are submitted to the application via a login form.
 
-We define .... TODO FIXME with passport's `use()` function:
-Notice that we can optionally configure the user's sign in as "email" in an object passed to LocalStrategy.
+Notice that we can optionally configure the user's sign in as "email" in an object passed to passport.
 
 ```js
 passport.use(new LocalStrategy(
@@ -89,7 +81,7 @@ passport.use(new LocalStrategy(
   },
 ```
 
-The request authentication is configured in a function passed to Passport. Here we pass our sign in credentials (email & password) as the first two paramaters.
+The request authentication is configured in a function passed to Passport. Here we pass our sign in credentials (email & password) as the first two parameters.
 
 ```js
 /// pass in function with sign in credentials and verify callback

@@ -38,39 +38,6 @@ You are required to submit the following:
 
 _Note: Don't forget to change the sharing settings on your Google Doc._
 
-```
-.
-├── config
-│   ├── passport.js
-│   └── middleware
-│         └── isAuthenticated.js
-├── models
-│   ├── index.js
-│   └── user.js
-│
-├── node_modules
-│ 
-├── public
-│   ├── stylesheets
-│   │       └── style.css
-│   └─ js
-│   │  ├── login.js
-│   │  ├── members.js
-│   │  └── signup.js
-│   │
-│   ├── login.html
-│   ├── members.html
-│   └── signup.html
-│  
-├── routes
-│   ├── api-routes.js
-│   └── html-routes.js
-│
-├── package.json
-│
-└── server.js
-```
-
 ---
 
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
